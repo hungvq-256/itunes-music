@@ -105,7 +105,10 @@ export default function SearchAppBar() {
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search"
-              inputProps={{ "aria-label": "search" }}
+              inputProps={{
+                "aria-label": "search",
+                "data-testid": "test-input-id",
+              }}
               onChange={handleSearch}
               value={textSearch}
             />

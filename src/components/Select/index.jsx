@@ -38,7 +38,7 @@ export default function SelectSmall() {
       sx={{ m: 1, minWidth: 120, maxWidth: 200, display: "flex" }}
       size="small"
     >
-      <InputLabel id="demo-select-small-label">Filter test</InputLabel>
+      <InputLabel id="demo-select-small-label">Filter</InputLabel>
       <Select
         inputProps={{ "data-testid": "test-select-id" }}
         labelId="demo-select-small-label"
