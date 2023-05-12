@@ -1,0 +1,50 @@
+.song-infor-wrapper {
+  &__main-image {
+    position: relative;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(204, 203, 203, 0.397);
+    margin: 0 auto;
+    border-radius: 5px;
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+    @media (max-width: 767px) {
+      width: 55%;
+    }
+    .inner-audio {
+      width: 95%;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      pointer-events: none;
+      @media (max-width: 767px) {
+        opacity: 1;
+        pointer-events: visible;
+      }
+    }
+    &:hover {
+      .inner-audio {
+        opacity: 1;
+        pointer-events: visible;
+      }
+    }
+  }
+  &__infor-box {
+    .title {
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+    .price-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

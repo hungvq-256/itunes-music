@@ -1,0 +1,46 @@
+module.exports = {
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+  ],
+  parser: "babel-eslint",
+  plugins: ["react", "prettier", "jest"],
+  parserOptions: {
+    ecmaVersion: 2016,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  env: {
+    es6: true,
+    node: true,
+    "jest/globals": true,
+  },
+  globals: {
+    localStorage: true,
+    ga: true,
+    fetch: true,
+    window: true,
+    document: true,
+    Raven: true,
+    ENV: true,
+  },
+  rules: {
+    "react/prop-types": "off",
+    "no-console": 0,
+    "react/sort-comp": [
+      1,
+      {
+        order: [
+          "type-annotations",
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "render",
+        ],
+      },
+    ],
+  },
+};
